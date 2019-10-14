@@ -1,1 +1,7 @@
-<p>blog-post-tile works!</p>
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title">{{post.title}}</h1>
+    <p class="card-text">{{post.summary | truncate: [30]}}</p>
+    <a href="#" class="btn btn-primary">Read</a>
+  </div>
+</div>

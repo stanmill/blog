@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogPost } from '../blog-post';
 
 @Component({
   selector: 'app-blog-list',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogListComponent implements OnInit {
 
-  constructor() { }
+  blogPost: BlogPost[] = [];
+  constructor() { } // used for dependency injection
 
-  ngOnInit() {
+  ngOnInit() { // best practive
+    this.blogPost.push(new BlogPost('Blog post 1', 'summary 1'));
+    this.blogPost.push(new BlogPost('Blog post 2', 'summary 2'));
+    this.blogPost.push(new BlogPost('Blog post 3', 'summary 3'));
   }
 
 }
