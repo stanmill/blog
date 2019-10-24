@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-body">
     <h1 class="card-title">{{post.title}}</h1>
-    <p class="card-text">{{post.summary | truncate: [30]}}</p>
+    <p class="card-text" (click)="showSummary()">{{post.summary }}</p>
     <a href="#" class="btn btn-primary">Read</a>
   </div>
 </div>
