@@ -8,13 +8,47 @@ import { BlogPost } from '../blog-post';
 })
 export class BlogListComponent implements OnInit {
 
-  blogPost: BlogPost[] = [];
+  blogPost: BlogPost[][];
+  currentPage: number;
   constructor() { } // used for dependency injection
 
   ngOnInit() { // best practive
-    this.blogPost.push(new BlogPost('Blog post 1', 'summary 1'));
-    this.blogPost.push(new BlogPost('Blog post 2', 'summary 2'));
-    this.blogPost.push(new BlogPost('Blog post 3', 'summary 3 alkavsjdlfnksdfdslknvsdflksldfl'));
+    this.currentPage = 0;
+    this.blogPost = [
+      [
+      {title: 'Post 1',
+      summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+        {title: 'Post 2',
+        summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+          {title: 'Post 3',
+          summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+            {title: 'Post 4',
+            summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+            ],
+            [
+              {title: 'Post 5',
+              summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+                {title: 'Post 6',
+                summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+                  {title: 'Post 7',
+                  summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+                    {title: 'Post 8',
+                    summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+                    ],
+                    [
+                      {title: 'Post 9',
+                      summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+                        {title: 'Post 10',
+                        summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+                          {title: 'Post 11',
+                          summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+                            {title: 'Post 12',
+                            summary: ' Lorem ipsum dolor sit amet, cosnsecteur adipiscing elite'},
+                            ],
+    ];
+  }
+  updatePage(newPage) {
+    this.currentPage = newPage;
   }
 
 }
