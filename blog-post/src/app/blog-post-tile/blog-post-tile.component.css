@@ -1,0 +1,6 @@
+.blog-btn {
+  font-weight: 900;
+}
+:host {
+  margin: 20px;
+}
